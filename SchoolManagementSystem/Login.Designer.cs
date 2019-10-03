@@ -33,9 +33,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.LoginBTN = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,6 +59,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.button1);
             this.panel5.Size = new System.Drawing.Size(841, 538);
             // 
             // panel4
@@ -100,13 +103,22 @@
             // 
             this.LoginBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginBTN.Location = new System.Drawing.Point(15, 141);
+            this.LoginBTN.Location = new System.Drawing.Point(15, 134);
             this.LoginBTN.Name = "LoginBTN";
             this.LoginBTN.Size = new System.Drawing.Size(200, 30);
             this.LoginBTN.TabIndex = 4;
             this.LoginBTN.Text = "LOGIN";
             this.LoginBTN.UseVisualStyleBackColor = true;
             this.LoginBTN.Click += new System.EventHandler(this.LoginBTN_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(335, 162);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -121,6 +133,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -132,5 +145,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
