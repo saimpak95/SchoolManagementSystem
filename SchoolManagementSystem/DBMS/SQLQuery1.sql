@@ -1,0 +1,2 @@
+CREATE DATABASE sms
+use sms
