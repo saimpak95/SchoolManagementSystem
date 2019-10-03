@@ -385,3 +385,57 @@ end
 execute SP_SUBJECT_VIEW
 /* END OF SUBJECTS */
 
+/* START SHIFT */
+
+create table SchoolShift(
+
+ShiftID int primary key identity(1,1),
+ShiftName varchar(100),
+StartTime varchar(100),
+EndTime varchar(100)
+)
+
+
+create proc SP_SHIFT_INSERT(
+@ShiftName varchar(100),
+@StartTime varchar(100),
+@EndTime varchar(100)
+)
+as begin 
+Insert into SchoolShift (ShiftName,StartTime,EndTime) values(@ShiftName,@StartTime,@EndTime)
+end
+
+create proc SP_SHIFT_UPDATE(
+@ShiftID int,
+@ShiftName varchar(100),
+@StartTime varchar(100),
+@EndTime varchar(100)
+)
+as begin 
+Update SchoolShift set ShiftName=@ShiftName,StartTime=@StartTime,EndTime=@EndTime where ShiftID=@ShiftID
+end
+
+create proc SP_SHIFT_DELETE(
+@ShiftID int
+)
+as begin 
+Delete from  SchoolShift  where ShiftID=@ShiftID
+end
+
+create proc SP_SHIFT_VIEW
+as begin 
+select ShiftID as 'ID',ShiftName as 'NAME',StartTime as 'FROM', EndTime as 'TO' from SchoolShift
+end
+
+
+create proc SP_SHIFT_VIEW_LIKE(
+@DataItem varchar(100)
+)
+as begin 
+select ShiftID as 'ID',ShiftName as 'NAME',StartTime as 'FROM', EndTime as 'TO' from SchoolShift where ShiftName like '%'+@DataItem+'%' or
+StartTime like '%'+@DataItem+'%' or 
+EndTime like '%'+@DataItem+'%'
+end
+
+/* END OF  SHIFT */
+

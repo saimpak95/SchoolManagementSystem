@@ -136,5 +136,23 @@ namespace SchoolManagementSystem
             }
         }
 
+
+        public static void SHIFT(int ID)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SP_SHIFT_DELETE", MainClass.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ShiftID", ID);
+                MainClass.con.Open();
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MainClass.ShowMessage(ex.ToString(), "ERROR", "Error");
+            }
+        }
     }
 }
