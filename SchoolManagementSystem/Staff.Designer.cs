@@ -64,13 +64,12 @@
             this.StaffUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffNameGv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffUserNameGv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffRoleGv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffPasswordGv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffConPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffPhoneGv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffPhone2Gv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffRoleGv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffStatusGv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffImageGv = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -448,13 +447,12 @@
             this.StaffUserID,
             this.StaffNameGv,
             this.StaffUserNameGv,
+            this.StaffRoleGv,
             this.StaffPasswordGv,
             this.StaffConPassword,
             this.StaffPhoneGv,
             this.StaffPhone2Gv,
-            this.StaffRoleGv,
-            this.StaffStatusGv,
-            this.StaffImageGv});
+            this.StaffStatusGv});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -499,6 +497,12 @@
             this.StaffUserNameGv.Name = "StaffUserNameGv";
             this.StaffUserNameGv.ReadOnly = true;
             // 
+            // StaffRoleGv
+            // 
+            this.StaffRoleGv.HeaderText = "ROLE";
+            this.StaffRoleGv.Name = "StaffRoleGv";
+            this.StaffRoleGv.ReadOnly = true;
+            // 
             // StaffPasswordGv
             // 
             this.StaffPasswordGv.HeaderText = "PASSWORD";
@@ -521,27 +525,15 @@
             // 
             // StaffPhone2Gv
             // 
-            this.StaffPhone2Gv.HeaderText = "Phone 2";
+            this.StaffPhone2Gv.HeaderText = "PHONE 2";
             this.StaffPhone2Gv.Name = "StaffPhone2Gv";
             this.StaffPhone2Gv.ReadOnly = true;
-            // 
-            // StaffRoleGv
-            // 
-            this.StaffRoleGv.HeaderText = "ROLE";
-            this.StaffRoleGv.Name = "StaffRoleGv";
-            this.StaffRoleGv.ReadOnly = true;
             // 
             // StaffStatusGv
             // 
             this.StaffStatusGv.HeaderText = "STATUS";
             this.StaffStatusGv.Name = "StaffStatusGv";
             this.StaffStatusGv.ReadOnly = true;
-            // 
-            // StaffImageGv
-            // 
-            this.StaffImageGv.HeaderText = "IMAGE";
-            this.StaffImageGv.Name = "StaffImageGv";
-            this.StaffImageGv.ReadOnly = true;
             // 
             // Staff
             // 
@@ -599,12 +591,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffUserID;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffNameGv;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffUserNameGv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StaffRoleGv;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffPasswordGv;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffConPassword;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffPhoneGv;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffPhone2Gv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StaffRoleGv;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffStatusGv;
-        private System.Windows.Forms.DataGridViewImageColumn StaffImageGv;
     }
 }
