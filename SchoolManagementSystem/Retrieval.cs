@@ -204,5 +204,34 @@ namespace SchoolManagementSystem
                 MainClass.ShowMessage(ex.ToString(), "ERROR", "Error");
             }
         }
+
+        public static void SHIFT(DataGridView gv, DataGridViewColumn id, DataGridViewColumn name, DataGridViewColumn from, DataGridViewColumn to, string data = null)
+        {
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                if (data == null)
+                { cmd = new SqlCommand("SP_SHIFT_VIEW", MainClass.con); }
+                else
+                {
+                    cmd = new SqlCommand("SP_SHIFT_VIEW_LIKE", MainClass.con);
+                    cmd.Parameters.AddWithValue("@DataItem", data);
+                }
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                id.DataPropertyName = dt.Columns["ID"].ToString();
+                name.DataPropertyName = dt.Columns["NAME"].ToString();
+                from.DataPropertyName = dt.Columns["FROM"].ToString();
+                to.DataPropertyName = dt.Columns["TO"].ToString();
+                gv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+
+                MainClass.ShowMessage(ex.ToString(), "ERROR", "Error");
+            }
+        }
     }
 }

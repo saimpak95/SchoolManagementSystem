@@ -75,5 +75,11 @@ namespace SchoolManagementSystem
             SUBJECT obj = new SUBJECT();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
+
+        private void BTNShift_Click(object sender, EventArgs e)
+        {
+            SHIFT obj = new SHIFT();
+            MainClass.ShowWindow(obj, this, MDI.ActiveForm);
+        }
     }
 }

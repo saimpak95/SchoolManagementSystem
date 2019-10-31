@@ -46,7 +46,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.BTNSubject = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.BTNShift = new System.Windows.Forms.Button();
             this.BTNPeriod = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.BTNHouse = new System.Windows.Forms.Button();
@@ -122,7 +122,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button12, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.button11, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.BTNSubject, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button9, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.BTNShift, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.BTNPeriod, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.button7, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.BTNHouse, 0, 1);
@@ -402,22 +402,23 @@
             this.BTNSubject.UseVisualStyleBackColor = false;
             this.BTNSubject.Click += new System.EventHandler(this.BTNSubject_Click);
             // 
-            // button9
+            // BTNShift
             // 
-            this.button9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.FlatAppearance.BorderSize = 5;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(552, 123);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(177, 114);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "SHIFT";
-            this.button9.UseVisualStyleBackColor = false;
+            this.BTNShift.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BTNShift.BackColor = System.Drawing.Color.White;
+            this.BTNShift.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTNShift.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BTNShift.FlatAppearance.BorderSize = 5;
+            this.BTNShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNShift.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNShift.ForeColor = System.Drawing.Color.Black;
+            this.BTNShift.Location = new System.Drawing.Point(552, 123);
+            this.BTNShift.Name = "BTNShift";
+            this.BTNShift.Size = new System.Drawing.Size(177, 114);
+            this.BTNShift.TabIndex = 8;
+            this.BTNShift.Text = "SHIFT";
+            this.BTNShift.UseVisualStyleBackColor = false;
+            this.BTNShift.Click += new System.EventHandler(this.BTNShift_Click);
             // 
             // BTNPeriod
             // 
@@ -628,7 +629,7 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button BTNSubject;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button BTNShift;
         private System.Windows.Forms.Button BTNPeriod;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button BTNHouse;

@@ -166,5 +166,28 @@ namespace SchoolManagementSystem
 
         }
 
+
+        public static void SHIFT(int id, string name, string from, string to)
+        {
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SP_SHIFT_UPDATE", MainClass.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ShiftID", id);
+                cmd.Parameters.AddWithValue("@ShiftName", name);
+                cmd.Parameters.AddWithValue("@StartTime", from);
+                cmd.Parameters.AddWithValue("@EndTime", to);
+                MainClass.con.Open();
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MainClass.ShowMessage(ex.ToString(), "ERROR", "Error");
+            }
+
+        }
     }
 }

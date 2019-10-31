@@ -141,5 +141,25 @@ namespace SchoolManagementSystem
                 MainClass.ShowMessage(ex.ToString(), "ERROR", "Error");
             }
         }
+
+        public static void SHIFT(string name, string from,string  to)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SP_SHIFT_INSERT", MainClass.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ShiftName", name);
+                cmd.Parameters.AddWithValue("@StartTime", from);
+                cmd.Parameters.AddWithValue("@EndTime", to);
+                MainClass.con.Open();
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MainClass.ShowMessage(ex.ToString(), "ERROR", "Error");
+            }
+        }
     }
 }
